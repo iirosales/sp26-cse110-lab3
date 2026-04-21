@@ -1,0 +1,61 @@
+
+body {
+    /* RGB + Color Name */
+    color: rgb(2, 82, 63);
+    background-color: lightgreen;
+
+    /*Auto Margins */
+    margin: auto;
+    width: 800px;
+}
+
+header {
+    /*Hex */
+    background-color: #71da51;
+
+    /*LONG Margin*/
+    margin-top: 0.5in;
+    margin-bottom: 0.5in;
+    margin-left: 0in;
+    margin-right: 0in;
+
+    /*LONG Padding*/
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    /* LONG border */
+    border-style: double;
+    border-color: black;
+    border-width: 3pt;
+}
+
+main {
+    color: rgb(0, 0, 0);
+
+    /* Short Margin*/
+    margin: 2rem 0 2rem 0;
+
+    /* ShortPadding */
+    padding: 2em;
+
+    /* Short Border */
+    border: 1px solid #ccc;
+    border-radius: 15px;
+}
+
+section {
+    /*HSL */
+    background-color: hsl(168, 79%, 89%);
+    margin-bottom: 20px;
+}
+
+footer {
+    /* Wider-gamut colors */
+    color: color-mix(in srgb, navy, white 30%);
+
+    background-color: color(srgb 0.9 0.9 0.9);
+    
+    padding: 50px;
+}
