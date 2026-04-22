@@ -2,11 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Sekuya&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&family=Sekuya&display=swap');
 
+/* Universal selector */
+* {
+    box-sizing: border-box;
+}
+
+
 /* variables and fallbacks */
 :root {
     --main-bg-color: #f0f0f0;
     --accent-green: #71da51;
     --text-color:rgb(2, 82, 63);
+    --red-color: rgb(255, 0, 0);
 }
 
 body {
@@ -20,6 +27,11 @@ body {
     margin: auto;
     width: 999px;
 }
+
+h2, h3 {
+    letter-spacing: 0.05rem;
+}
+
 
 header {
     /*Hex */
@@ -57,7 +69,7 @@ main {
     height: auto;
     min-height: 200px;
     max-width: 100%;
-    mind-width: 300px;
+    min-width: 300px;
 
     color: rgb(0, 0, 0);
 
@@ -123,14 +135,95 @@ footer {
     
     padding: 50px;
     text-align: center;
+
+
+    border-top: 1px solid #ccc;
 }
 
+#specifics {
+    border-left: 5px solid var(--text-color);
+    border-right: 5px solid var(--text-color);
+}
 
+.home-link {
+    font-weight: bold;
+    text-decoration: line-through;
+}
 
+a.home-link {
+    text-transform: uppercase;
+    color: var(--red-color);
+}
+
+a[target="_blank"] {
+    cursor: alias;
+    font-style: italic;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+section > h2 {
+    color: var(--text-color);
+}
+
+h2 + h3 {
+    margin-top: -10px;
+    opacity: 0.33;
+}
+
+h3 ~ p {
+    font-style: italic;
+    color: var(--red-color);
+    
+}
+
+/* Pseudo - classes selectors */
+p:first-child {
+    font-weight: bold;
+}
+
+/*modern selctors) */
+
+section:has(h3) {
+    border: 5px dashed var(--accent-green);
+    background-color: color-mix(in srgb, var(--accent-green), white 50%);
+}
+
+form {
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 10px;
+
+    button {
+        background-color: var(--accent-green);
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(75, 191, 75);
+            color: red;
+        }
+    }
+
+}
 
 @media (max-width: 1000px) {
     body {
         width: 95%;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
     }
     
     #attendance ul {
