@@ -18,7 +18,7 @@
 
 body {
     /*fonts */
-    font-family: 'Datatype', 'Sekuya', sans-serif;
+    font-family: 'Datatype', sans-serif;
     /* RGB + Color Name */
     color: var(--text-color, darkgreen);
     background-color: var(--main-bg-color, lightgray);
@@ -59,7 +59,9 @@ header {
 }
 
 h1{
+    font-family: 'Sekuya', sans-serif;
     text-decoration: underline wavy rgb(128, 0, 19);
+    font-size: 2rem;
 }
 
 main {
